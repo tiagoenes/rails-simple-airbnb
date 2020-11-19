@@ -1,0 +1,19 @@
+<%= render "./flats/form", flat: @new_flat%>
+
+<div class="container">
+  <h1>Flats</h1>
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <%= link_to flat_path(flat) do %>
+    <div class="col-4 flats">
+      <div class="card rounded-lg overflow-hidden" style="width: 18rem;">
+        <img src="https://a0.muscache.com/im/pictures/a9d46a9f-ae65-4a77-9c6b-43279455e34e.jpg?im_w=1440" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"> <%= flat.name %> </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
